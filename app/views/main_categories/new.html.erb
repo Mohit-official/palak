@@ -1,0 +1,18 @@
+<h1 class="title"> new category</h1>
+
+<div>
+  <%= form_for @cat do |f| %>
+    <div class="field">
+      <div>
+        <%= f.text_field :name %>
+      </div>
+    </div>
+    <div class="field">
+      <div>
+        <%= f.text_field :description %>
+        
+      </div>
+    </div>
+    <%= f.submit %>
+  <% end %>  
+</div>
