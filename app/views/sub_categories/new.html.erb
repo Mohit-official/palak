@@ -1,0 +1,22 @@
+<h1 class="title"> new sub category</h1>
+
+<div>
+  <%= form_for @scat do |f| %>
+    <div class="field">
+      <div>
+        <%= f.text_field :name %>
+      </div>
+    </div>
+    <div class="field">
+      <div>
+        <%= f.text_field :description %>
+      </div>
+    </div>
+    
+      <td><%= f.label :category %></td>
+      <td><%= f.select(:main_category_id, options_from_collection_for_select(MainCategory.all, :id, :name)) %></td>  
+    
+    
+    <%= f.submit %>
+  <% end %>  
+</div>qq

@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
 	before_action :authenticate_user!
 	def index
-	
+	@products = Product.all
 	end
 
 	def new
@@ -26,7 +26,8 @@ class ProductsController < ApplicationController
 	private
 	
 	def product_params
-		params.require(:product).permit(:name, :description, :main_category_id)
+		params.require(:product).permit(:name, :description, :main_category_id, :sub_category_id, avatars:[])
 	end
 
 end
+ 

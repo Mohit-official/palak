@@ -13,9 +13,10 @@ class MainCategoriesController < ApplicationController
 		@cat = MainCategory.new(category_params)
 	
 		if @cat.save
-			render 'index'
+			# render 'index'
+			render 'show'
 		else
-			rander 'new'
+			render 'new'
 		end	
 	end
 	def show
@@ -26,7 +27,7 @@ class MainCategoriesController < ApplicationController
 	private
 	
 	def category_params
-		params.require(:main_category).permit(:name, :description)
+		params.require(:main_category).permit(:name, :description, :avatar)
 	end
 
 end

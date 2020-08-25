@@ -6,5 +6,6 @@ class User < ApplicationRecord
        :rememberable,
        :trackable,
        :validatable
-has_many :product
+  has_many :products
+
 end

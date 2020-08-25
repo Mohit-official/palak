@@ -1,2 +1,3 @@
 class ProductCategory < ApplicationRecord
+	
 end

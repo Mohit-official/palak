@@ -3,7 +3,7 @@ class CreateMainCategories < ActiveRecord::Migration[5.1]
     create_table :main_categories do |t|
       t.string :name
       t.string :description
-
+      t.string :avatar
       t.timestamps
     end
   end
