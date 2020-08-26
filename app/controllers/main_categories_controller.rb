@@ -31,3 +31,4 @@ class MainCategoriesController < ApplicationController
 	end
 
 end
+ 
