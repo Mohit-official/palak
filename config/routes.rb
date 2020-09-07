@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   
  
-
   devise_for :admin_users, ActiveAdmin::Devise.config
   root 'home#index'
 
@@ -11,7 +10,7 @@ Rails.application.routes.draw do
   
 
       devise_for :users, controllers: {
-        sessions: 'users/sessions'
+        sessions: 'users/sessions',omniauth_callbacks: "users/omniauth_callbacks", registrations: "users/registrations", confirmations: 'users/confirmations'
       }
     
 
