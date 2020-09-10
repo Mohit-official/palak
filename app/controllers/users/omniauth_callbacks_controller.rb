@@ -32,7 +32,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
       if @user.persisted?
         sign_in @user
-        redirect_to 'root'
+        redirect_to root_path
         #flash[:notice] = I18n.t 'devise.omniauth_callbacks.success', kind: 'Google'
         #sign_in_and_redirect @user, event: :authentication
       else
